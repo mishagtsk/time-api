@@ -24,4 +24,5 @@ app.MapGet("/time", () => new
     .WithName("GetTime")
     .WithOpenApi();
 
+
 app.Run();
