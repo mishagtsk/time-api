@@ -16,7 +16,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-
 app.MapGet("/time", () => new
     {
         CurrentTime = DateTime.UtcNow,
