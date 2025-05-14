@@ -52,11 +52,11 @@ jobs: # define jobs
     needs: [build-and-test] # array of dependent jobs
 
     steps:
-      # - name: Download atrifact from build job
-      #   uses: actions/download-artifact@v4 
-      #   with:
-      #     name: webapp
-      #     path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+      - name: Download atrifact from build job
+        uses: actions/download-artifact@v4 
+        with:
+          name: webapp
+          path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
       
       - name: Deploy 
         uses: azure/webapps-deploy@v2
